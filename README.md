@@ -1,4 +1,4 @@
-######## # Unit Testing - Estudos e Práticas 🧪
+## Unit Testing - Estudos e Práticas 🧪
 
 Repositório dedicado aos meus estudos práticos sobre testes de unidade, guiados pelo livro **"Unit Testing: Principles, Practices, and Patterns"** do autor Vladimir Khorikov.
 
