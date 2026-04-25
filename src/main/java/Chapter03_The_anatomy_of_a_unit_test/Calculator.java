@@ -10,7 +10,7 @@ public class Calculator {
         return first - second;
     }
 
-    public double multiply(double first, double second) {
+    public double multiplication(double first, double second) {
         return first * second;
     }
 }
