@@ -5,4 +5,12 @@ public class Calculator {
     public double sum(double first, double second) {
         return first + second;
     }
+
+    public double subtraction(double first, double second) {
+        return first - second;
+    }
+
+    public double multiply(double first, double second) {
+        return first * second;
+    }
 }
