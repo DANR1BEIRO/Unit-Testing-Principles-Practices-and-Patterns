@@ -1,13 +1,13 @@
 package Chapter03_The_anatomy_of_a_unit_test;
 
+import Chapter03_The_anatomy_of_a_unit_test.exception.DivideByZeroException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 @DisplayName("Tests for Calculator Class")
 class CalculatorTest {
@@ -109,5 +109,19 @@ class CalculatorTest {
         double result = calculator.multiplication(Double.MAX_VALUE, 2);
 
         assertTrue(Double.isInfinite(result));
+    }
+
+    @ParameterizedTest
+    @CsvSource({
+            "10.0, 0",
+            "5.5, 0",
+            "-1.0, 0"
+    })
+    @DisplayName("Should throw an exception when second digit is zero")
+    void division_shouldThrowException_whenDividedByZero(double first, double second) {
+
+        assertThrows(DivideByZeroException.class,
+                () -> calculator.division(first, second));
+
     }
 }
